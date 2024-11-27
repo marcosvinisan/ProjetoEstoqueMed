@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f4f7f9; /* Alterado para um tom claro consistente com o restante */
+    color: #333; /* Texto escuro para boa legibilidade */
+    font-family: 'Roboto', Arial, sans-serif; /* Fonte usada no restante do projeto */
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #004d61; /* Tom azul usado nos títulos */
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555; /* Cor secundária para o texto */
+    margin-bottom: 2em;
+}
+
+a {
+    color: #ffffff; /* Texto claro para contraste */
+    text-decoration: none;
+    background-color: #007b8a; /* Azul do layout */
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #005f66; /* Azul mais escuro no hover */
+    color: #ffffff; /* Garante texto branco no hover */
+}

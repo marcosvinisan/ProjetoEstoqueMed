@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque de Medicamentos</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Controle de Estoque de Medicamentos</h1>
+    <p>Bem-vindo ao sistema de controle de estoque de medicamentos. Escolha uma das opções abaixo:</p>
+
+    <div class="menu">
+        <a href="listarMedicamentos.jsp" class="btn">Listar Medicamentos</a>
+    </div>
+
+    <hr />
+
+    <h2>Registrar Novo Medicamento</h2>
+    <p>Preencha todos os campos necessários para registrar o medicamento.</p>
+    <form method="post" action="salvarMedicamento.jsp" accept-charset="UTF-8">
+        <fieldset>
+            <label for="med-name">Nome comercial do medicamento:
+                <input id="med-name" name="med-name" type="text" required placeholder="Ex: Pristiq" />
+            </label>
+            <label for="formula">Fórmula química da medicação (substância ativa):
+                <input id="formula" name="formula" type="text" required placeholder="Ex: Desvenlafaxina" />
+            </label>
+            <label for="batch-number">Número do lote:
+                <input id="batch-number" name="batch-number" type="text" required placeholder="Ex: 123456" />
+            </label>
+            <label for="expiry-date">Data de validade:
+                <input id="expiry-date" name="expiry-date" type="date" required />
+            </label>
+            <label for="laboratory">Laboratório fornecedor:
+                <input id="laboratory" name="laboratory" type="text" required placeholder="Ex: EuroFarma" />
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tipo de medicamento:</legend>
+            <label for="basic-account">
+                <input id="basic-account" type="radio" name="account-type" value="Básico" class="inline" checked /> Venda sem prescrição médica.
+            </label>
+            <label for="advanced-account">
+                <input id="advanced-account" type="radio" name="account-type" value="Avançado" class="inline" /> Venda controlada. (Apenas com Receita)
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for="source">Classificação do medicamento:
+                <select id="source" name="source">
+                    <option value="">Selecione um tipo</option>
+                    <option value="1">Analgésico</option>
+                    <option value="2">Antibiótico</option>
+                    <option value="3">Anti-Inflamatório</option>
+                    <option value="4">Antialérgico</option>
+                    <option value="5">Antipirético</option>
+                    <option value="6">Antiespasmódico</option>
+                    <option value="7">Antifúngico</option>
+                    <option value="8">Antiviral</option>
+                    <option value="9">Cardiovascular</option>
+                    <option value="10">Gastroprotetor</option>
+                </select>
+            </label>
+            <label for="bio">Observações sobre o medicamento:
+                <textarea id="bio" name="bio" rows="3" cols="30"
+                          placeholder="Ex: Recomendações de uso, precauções, efeitos colaterais, interações medicamentosas, instruções de armazenamento, etc"></textarea>
+            </label>
+        </fieldset>
+
+        <label for="terms-and-conditions">
+            <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" />
+            Este medicamento está registrado e autorizado pela ANVISA.
+        </label>
+
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+
+</html>
